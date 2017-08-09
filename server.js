@@ -18,8 +18,26 @@ app.get('/ui/madi.png', function (req, res) {
 });
 
 app.get('/ui/isro/css/common.css', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'isro','css','logo1.png'));
+  res.sendFile(path.join(__dirname, 'ui', 'isro','css','common.css'));
 });
+
+
+
+app.get('/ui/isro/css/home.css', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'isro','css','home.css'));
+});
+
+
+
+app.get('/ui/isro/script/home.js', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'isro','script','home.js'));
+});
+
+
+
+
+
+
 
 
 app.get('/ui/isro/img/logo.ico', function (req, res) {
