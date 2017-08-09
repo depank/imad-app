@@ -23,7 +23,7 @@ app.get('/articleone',function(req,res){
 });
 
 app.get('/isro/',function(req,res){
-    res.sendFile(path.join(__dirname, 'ui','isro', 'speedpost-home.html'));
+    res.sendFile(path.join(__dirname, 'ui','isro', 'speedpost.html'));
 });
 app.get('/isro/send',function(req,res){
 res.sendFile(path.join(__dirname, 'ui', 'isro','send.html'));
