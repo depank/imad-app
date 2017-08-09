@@ -1,0 +1,116 @@
+
+
+
+
+.f1{
+height:40px;
+width:250px;
+margin-left:30px;
+font-size:30px;
+}
+
+
+
+#instruct{
+    
+    font-size: 20px;
+    letter-spacing: 3px;
+    font-family: monospace ;
+    line-height: 40px;
+     text-decoration:none;
+    margin-left: 7%;
+    color:black;
+    text-transform: full-width;
+   /*   text-shadow: 2px 2px black;
+   
+  text-transform: capitalize;*/ 
+    
+} 
+
+marquee{
+    background-color:antiquewhite;
+}
+
+h2{
+    font-size: 40px;
+    transform:translateX(25%);
+text-transform: full-width;
+
+
+}
+
+
+
+
+legend{
+color:red; font-size:30px;}
+p,p1{
+color:red;
+font-size:30px;
+   
+}
+
+#qrcode{
+width:200px;
+height:200px;
+margin-top:15px;
+margin-left:300px;}
+
+#from1{
+float:right;
+width:40%;
+margin-top:30px;
+margin-bottom:30px;
+text-transform: capitalize;}
+
+#from2{
+
+width:40%;
+margin-top:30px;
+    text-transform: capitalize;
+margin-bottom:30px;}
+#fr{
+height:40px;
+width:200px;
+font-size:20px;
+    
+}
+
+
+
+#map {
+        height: 500px;
+      }
+       /*Optional: Makes the sample page fill the window. */
+  
+      #floating-panel {
+        position: absolute;
+       /*top: 10px;*/
+        left: 50%;
+        z-index: 5;
+        background-color: #fff;
+        padding: 5px;
+        border: 1px solid #999;
+        text-align: center;
+        font-family: 'Roboto','sans-serif';
+        line-height: 30px;
+        padding-left: 10px;
+      }
+
+
+#subres{
+text-align:center;
+font-size:30px;
+text-decoration:underline;
+}
+#fsubmit,#tsubmit,#verify,#proceed_y,#proceed_n,#set_it,#set_itQR,#set_itQR1{
+margin-left:25%;
+margin-top:10px;
+text-align:center;
+font-size:20px;
+height:40px;
+width:150px;
+background:pink;
+border-radius:10px;
+
+}
