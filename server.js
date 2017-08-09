@@ -17,8 +17,24 @@ app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
 
+app.get('/ui/isro/img/logo.ico', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'isro','logo.ico'));
+});
+
 app.get('/ui/isro/img/home1.jpg', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'isro','img','home1.jpg'));
+});
+app.get('/ui/isro/img/home2.jpg', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'isro','img','home2.jpg'));
+});
+app.get('/ui/isro/img/home3.jpg', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'isro','img','home3.jpg'));
+});
+app.get('/ui/isro/img/home4.jpg', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'isro','img','home4.jpg'));
+});
+app.get('/ui/isro/img/home5.jpg', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'isro','img','home5.jpg'));
 });
 
 app.get('/ui/madi.png', function (req, res) {
