@@ -138,7 +138,7 @@ nochange();
     else return;
     var reset_=document.getElementById("set_it");
     reset_.removeAttribute('hidden');
-    document.getElementById("QRR").removeAttribute('hidden');
+    
 var lat1=  document.getElementById("lat1").value;
 var lon1=  document.getElementById("long1").value;
 var lat2=  document.getElementById("lat2").value;
@@ -238,17 +238,17 @@ p.setAttribute('hidden',"");
     v_msg.setAttribute('hidden',"");
 }
 
+
+
+
+
+
+
+
+
+
 var reset_=document.getElementById("set_it");
 reset_.addEventListener('click',doit1);
-var QR_=document.getElementById("set_itQR");
-QR_.addEventListener('click',makeCode);
-
-
-
-
-
-
-
 
 
  function doit1(){
@@ -270,7 +270,7 @@ var verify=document.getElementById("verify");
     p1.textContent="";
     var p2=document.getElementById("dist");
     p2.textContent="";
-     document.getElementById("QRR").setAttribute('hidden',"");
+     
  }
  /* 
 var  proc_n=document.getElementById("proceed_n");
@@ -285,54 +285,6 @@ p.setAttribute('hidden',"");
 }  */
 
 
-
-
-
-
-
-
-
-
-var qrcode = new QRCode("qrcode");
-
-
-function makeCode(form){
-    var elText="";
-    
-var a=document.querySelectorAll('input');
-    
-for(var i=0;i<12;i++){
-elText=elText+"\n"+a[i].value;
-}
-   
-if (!elText ) {
-        alert("Input a text");
-        elText.focus();
-   
-        return;
-    }
- qrcode.makeCode(elText);
-    
-    document.getElementById('qrcode').removeAttribute('title');
-}
-
-/*makeCode();
-var sub=document.querySelector('button');
-sub.addEventListener('click',makeCode)
-*/
-$("#text").
-    on("blur", function () {
-        makeCode();
-     
-    
-    }).
-    on("keydown", function (e) {
-        if (e.keyCode == 13) {
-            makeCode();
-           
-            
-        }
-    });
 
 
 
