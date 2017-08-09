@@ -36,6 +36,18 @@ app.get('/ui/isro/script/home.js', function (req, res) {
 
 
 
+app.get('/ui/isro/send.html', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'isro','send.html'));
+});
+
+app.get('/ui/isro/contact.html', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'isro','contact.html'));
+});
+
+app.get('/ui/isro/notice.html', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'isro','notice.html'));
+});
+
 
 
 
