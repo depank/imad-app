@@ -18,7 +18,7 @@ app.get('/ui/madi.png', function (req, res) {
 });
 
 app.get('/ui/isro/img/home1.jpg', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'isro','img','home1.png'));
+  res.sendFile(path.join(__dirname, 'ui', 'isro','img','home1.jpg'));
 });
 
 app.get('/ui/madi.png', function (req, res) {
