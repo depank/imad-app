@@ -23,10 +23,10 @@ app.get('/articleone',function(req,res){
 });
 
 app.get('/isro/',function(req,res){
-    res.sendFile(path.join(__dirname, 'ui', 'speedpost-home.html'));
+    res.sendFile(path.join(__dirname, 'ui','isro', 'speedpost-home.html'));
 });
-app.get('/articletwo',function(req,res){
-    res.send("second article is served");
+app.get('/isro/send',function(req,res){
+res.sendFile(path.join(__dirname, 'ui', 'isro','send.html'));
 });
 
 app.get('/articlethird',function(req,res){
