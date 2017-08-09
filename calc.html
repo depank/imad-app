@@ -1,0 +1,131 @@
+<!doctype>
+<html>
+<head> 
+    <meta charset="utf-8">
+<title>India post</title>
+<link rel="shortcut icon"  href="project/img/logo.ico">
+<link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="css/calculate.css">
+</head>
+<body>
+<header>
+
+<ul>
+<a href="#"><li id="logo1"><img src="project/img/logo1.png"></li></a>
+<a href="speedpost.html"><li>home</li></a>
+<a href="send.html"><li>send a package</li></a>
+<a href="calc.html"><li>calculate postage</li></a>
+<a href="notice.html"><li>notices</li></a>
+<a href="contact.html"><li>contact us</li></a>
+</ul>
+
+</header>
+    
+    
+    
+     <marquee id="ticker" direction="right" loop="60"><h1>India post welcomes you!!!&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+         भारतीय-डाक   आपका स्‍वागत करता है &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp wish you a great day ahead!</h1></marquee>
+   
+    <h2>To Proceed Follow the steps :-</h2>
+   <div id="instruct"><i><p3>
+    1.Fill up your name and mobile number</p3><br><p4>2.(i) Go to Map and locate your address and then click "submit for from" button.</p4>
+    <br><p5>(ii)Again go to Map and locate receiver address and then click "submit for to" button.</p5>
+    <br>
+        <p6>3.  Verify from and to  details by clicking "verify" button.</p6>
+   
+    
+    </i></div>
+    <form id="from1">
+<fieldset><legend>sender's details:</legend>
+<label ><div id="fr">sender's name:</div>
+</label>
+<input class="f1" placeholder="full name" type="text" id="name1"></input><br>
+<label ><div id="fr">mobile:
+</div></label>
+<input class="f1" placeholder="mobile" type="text"  id="mob1"></input><br>
+<label ><div id="fr">lattitude:</div>
+</label>
+<input class="f1" placeholder="lattitude" type="text" id="lat1"></input><br>
+<label ><div id="fr">longitude:</div>
+</label>
+<input class="f1"  placeholder="longitude" type="text"  id="long1"></input><br>
+<label ><div id="fr">zip:</div>
+</label>
+<input class="f1" placeholder="zip" type="text" id="zip1"></input><br>
+<label ><div id="fr">address:</div>
+</label>
+<input class="f1" placeholder="full addr" type="text" id="addr1"></input></fieldset></form>
+
+<form id="from2">
+<fieldset>
+<legend>reciever's details:</legend>
+<label ><div id="fr">reciever's name:</div>
+</label>
+<input class="f1" placeholder="full name" type="text" id="name2" value=""></input><br>
+<label ><div id="fr">mobile:
+</div></label>
+<input class="f1" placeholder="mobile" type="text" id="mob2" value=""></input><br>
+<label ><div id="fr">lattitude:</div>
+</label>
+<input class="f1" placeholder="lattitude"  id="lat2" type="text" value=""></input><br>
+<label ><div id="fr">longitude:</div>
+</label>
+<input class="f1" placeholder="longitude" type="text" id="long2" value=""></input><br>
+<label ><div id="fr">zip:</div>
+</label>
+<input class="f1" placeholder="zip" type="text" id="zip2" value=""></input><br>
+<label ><div id="fr">address:</div>
+</label>
+<input class="f1" placeholder="full addr" type="text" id="addr2" value=""></input>
+
+</fieldset>
+</form>
+<br>
+<br>
+<br>
+<div id="floating-panel">
+      <input id="address" type="textbox" value="Sydney, NSW">
+      <input id="submit"  type="button" value="Geocode">
+    </div>
+    <div id="map"></div>
+<div id="subres">submit maped result</div>
+<div >
+<input id="fsubmit" type="button" value="submit for from">
+<input id="tsubmit" type="button" value="submit for to"></div>
+<p id="v_msg" >verify from and to datails :</p><br>
+<input id="verify" type="button" value="verify"></input><br>
+<p1 id="proceed-msg"></p1><br>
+<input id="proceed_n" type="button" value="don't proceed" hidden></input>
+<input id="proceed_y" type="button" value="proceed"  hidden></input><br>
+
+
+<p id="dist"></p><br>
+<p id="wt"></p><br>
+<p id="cost"></p>
+<br>
+<input type="button" value="reset" id="set_it" hidden></input>
+
+<footer>
+<div id="ul1"> 
+<ul>
+<li>useful links</li>
+
+<a href="https://www.indiapost.gov.in/vas/Pages/IndiaPostHome.aspx"><li>India post</li></a>
+<a href="https://www.indiapost.gov.in/VAS/Pages/AboutUs/AboutUs.aspx"><li>about us</li></a>
+<a href="https://ebanking.indiapost.gov.in/corp/AuthenticationController?FORMSGROUP_ID__=AuthenticationFG&__START_TRAN_FLAG__=Y&__FG_BUTTONS__=LOAD&ACTION.LOAD=Y&AuthenticationFG.LOGIN_FLAG=1&BANK_ID=DOP"><li>India post atm</li></a>
+
+
+
+<li>developed by</li>
+<a href=""><li>4</li></a>
+<a href=""><li>5</li></a>
+<a href=""><li>6</li></a></ul>
+
+</footer>
+    <script src="script/calculate2.js"></script>
+<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=  AIzaSyCuWmUo_GNrd_IOSZXKylb2LRzBpvqRS4Q&callback=initMap"></script>
+
+
+</body>
+</html>
