@@ -17,6 +17,14 @@ app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
 
+app.get('/ui/isro/img/home1.jpg', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'isro','img','home1.png'));
+});
+
+app.get('/ui/madi.png', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
+});
+
 
 app.get('/articleone',function(req,res){
     res.sendFile(path.join(__dirname, 'ui', 'articleone.html'));
