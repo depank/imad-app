@@ -23,7 +23,7 @@ app.get('/articleone',function(req,res){
 });
 
 app.get('/isro/',function(req,res){
-    res.sendFile(path.join(__dirname, 'ui', 'speedpost-html.html'));
+    res.sendFile(path.join(__dirname, 'ui', 'speedpost-home.html'));
 });
 app.get('/articletwo',function(req,res){
     res.send("second article is served");
