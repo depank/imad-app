@@ -34,7 +34,13 @@ app.get('/ui/isro/script/home.js', function (req, res) {
 });
 
 
+app.get('/isro/',function(req,res){
+    res.sendFile(path.join(__dirname, 'ui','isro', 'speedpost.html'));
+});
 
+app.get('/new_isro/',function(req,res){
+    res.sendFile(path.join(__dirname, 'ui','isro', 'new_home.html'));
+});
 
 app.get('/ui/isro/send.html', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'isro','send.html'));
@@ -85,9 +91,7 @@ app.get('/articleone',function(req,res){
     res.sendFile(path.join(__dirname, 'ui', 'articleone.html'));
 });
 
-app.get('/isro/',function(req,res){
-    res.sendFile(path.join(__dirname, 'ui','isro', 'speedpost.html'));
-});
+
 app.get('/isro/send',function(req,res){
 res.sendFile(path.join(__dirname, 'ui', 'isro','send.html'));
 });
