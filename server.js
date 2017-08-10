@@ -43,7 +43,7 @@ app.get('/new_isro/',function(req,res){
 });
 
 app.get('/ui/isro/send.html', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'isro','send.html'));
+  res.sendFile(path.join(__dirname, 'ui', 'isro','new_send.html'));
 });
 
 app.get('/ui/isro/contact.html', function (req, res) {
