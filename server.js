@@ -92,9 +92,7 @@ app.get('/articleone',function(req,res){
 });
 
 
-app.get('/isro/send',function(req,res){
-res.sendFile(path.join(__dirname, 'ui', 'isro','send.html'));
-});
+
 
 app.get('/articlethird',function(req,res){
     res.send("third article is served");
