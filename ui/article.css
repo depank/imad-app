@@ -1,6 +1,9 @@
+.center{
+            background:blue;
+            
+        }
 body{
-  padding-left:50px;  
-   padding-right:50px;
-   color:black;
-   background:gray;
+    font-size:25px;
+    padding-right:50px;
+    padding-left:50px;
 }
