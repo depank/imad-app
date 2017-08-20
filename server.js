@@ -144,10 +144,11 @@ var htmlTemplet=`
         <hr>
         <h>
         ${heading}</h>
-        <div class="center">
          <div>
              ${date}
          </div>
+        <div class="center">
+        
          <div>
              ${content}
          </div>
