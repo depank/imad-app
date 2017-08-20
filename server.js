@@ -146,7 +146,7 @@ return htmlTemplet;
 }
 
 app.get('/articleone',function(req,res){
-    res.sendFile(path.join(__dirname, 'ui', createTemplet(articleone)));
+    res.send(createTemplet(articleone));
 });
 
 
