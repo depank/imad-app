@@ -162,7 +162,7 @@ var htmlTemplet=`
              ${content}
          </div>
         </div>
-        <div class="align_right">--${author}</div>
+        <div class="align_right">By:&nbsp&nbsp${author}</div>
         <hr>
                <div>COMMENT:
               <input type="text">&nbsp&nbsp&nbsp
