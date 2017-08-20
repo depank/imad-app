@@ -108,7 +108,7 @@ var title=data.title;
 var date=data.date;
 var content=data.content;
 var heading=data.heading;
-console.log(data.title);
+
 var htmlTemplet=`
 
 <!doctype html>
@@ -128,10 +128,10 @@ var htmlTemplet=`
         $(heading)</h>
         <div class="center">
          <div>
-             $(date)
+             ${date}
          </div>
          <div>
-             $(contents)
+             ${contents}
          </div>
             
         </div>
