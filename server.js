@@ -133,7 +133,7 @@ var heading=data.heading;
 var author=data.author;}
 
 catch(err){
- send("error!!!----article does not exist");   
+ res.send("error!!!----article does not exist");   
 }
 
 var htmlTemplet=`
