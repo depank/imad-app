@@ -97,12 +97,14 @@ var articles={
     articleone:{date:'5/10/2017',
     title:'first article',
      heading:"first article",
+     author:'suraj kumar rajput',
     content:'hii its first one in series'
    },
     articletwo:{
         date:'10/10/2017',
     title:'second article',
     heading:"second article",
+    author:'deepak kumar singh',
     content:'hii its second one in series'
     
     },
@@ -110,6 +112,7 @@ var articles={
         date:'15/10/2017',
     title:'third article',
      heading:"third article",
+     author:'Deepu',
     content:'hii its third one in series'
    
     }
@@ -146,7 +149,8 @@ var htmlTemplet=`
         <h >
         ${heading}</h></div>
          <div>
-             ${date}
+                <div>${date}</div>
+                <div class="align_left">${author}</div>
          </div>
         <div class="center">
         
