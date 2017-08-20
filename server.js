@@ -91,11 +91,29 @@ app.get('/ui/article.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'article.css'));
 });
 
-var articleone={
-    date:'5/10/2017',
+
+var articles={
+    
+    articleone:{date:'5/10/2017',
     title:'first article',
-    content:'hii its first one in series',
-    heading:"first article"
+     heading:"first article",
+    content:'hii its first one in series'
+   },
+    articletwo:{
+        date:'10/10/2017',
+    title:'second article',
+    heading:"second article",
+    content:'hii its second one in series'
+    
+    },
+    articlethree:{
+        date:'15/10/2017',
+    title:'third article',
+     heading:"third article",
+    content:'hii its third one in series'
+   
+    }
+    
 };
 
 
@@ -146,8 +164,9 @@ var htmlTemplet=`
 return htmlTemplet;
 }
 
-app.get('/articleone',function(req,res){
-    res.send(createTemplet(articleone));
+app.get('/:articleName',function(req,res){
+    var articleName=req.params.articleName;
+    res.send(createTemplet(articles[articleName]));
 });
 
 
