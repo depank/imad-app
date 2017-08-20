@@ -7,6 +7,9 @@ body{
     background-color:lightgrey;
 }
 
+h{
+    font-size:150%;
+}
 .container{
     font-size:25px;
 
