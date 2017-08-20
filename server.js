@@ -125,11 +125,16 @@ var articles={
 
 
 function createTemplet(data){
+    try{
 var title=data.title;
 var date=data.date;
 var content=data.content;
 var heading=data.heading;
-var author=data.author;
+var author=data.author;}
+
+catch(err){
+ send("error!!!----article does not exist");   
+}
 
 var htmlTemplet=`
 
