@@ -117,7 +117,7 @@ var htmlTemplet=`
     <meta name="viewport" content="width=device-width,initial-scale-1">
     <link href="/ui/article.css" rel="stylesheet" />
     <title>
-        $(title)
+        ${title}
     </title>
 </head>
 <body>
