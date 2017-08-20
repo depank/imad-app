@@ -131,7 +131,7 @@ var htmlTemplet=`
              ${date}
          </div>
          <div>
-             ${contents}
+             ${content}
          </div>
             
         </div>
