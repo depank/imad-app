@@ -130,11 +130,9 @@ var title=data.title;
 var date=data.date;
 var content=data.content;
 var heading=data.heading;
-var author=data.author;}
+var author=data.author;
 
-catch(err){
- res.send("error!!!----article does not exist");   
-}
+
 
 var htmlTemplet=`
 
@@ -173,7 +171,12 @@ var htmlTemplet=`
 
 
 `;
-return htmlTemplet;
+        return htmlTemplet;
+    }
+catch(err){
+ return "ERROR ARTICLE DOES NOT EXIST"; 
+}
+
 }
 
 app.get('/:articleName',function(req,res){
