@@ -142,8 +142,8 @@ var htmlTemplet=`
     <div class="container">
         <a href="/">Home</a>
         <hr>
-        <div>
-        <h class="center">
+        <div class="center">
+        <h >
         ${heading}</h></div>
          <div>
              ${date}
