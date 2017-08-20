@@ -108,6 +108,7 @@ var title=data.title;
 var date=data.date;
 var content=data.content;
 var heading=data.heading;
+console.log(data.title);
 var htmlTemplet=`
 
 <!doctype html>
