@@ -163,6 +163,7 @@ var htmlTemplet=`
          </div>
         </div>
         <div class="align_right">--${author}</div>
+        <hr>
                <div>COMMENT:
               <input type="text">&nbsp&nbsp&nbsp
               <input type="button" value="submit">
