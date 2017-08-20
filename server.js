@@ -174,7 +174,7 @@ var htmlTemplet=`
         return htmlTemplet;
     }
 catch(err){
- return "ERROR ARTICLE DOES NOT EXIST"; 
+ return "ERROR"+data+ "DOES NOT EXIST"; 
 }
 
 }
