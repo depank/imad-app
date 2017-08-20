@@ -158,9 +158,8 @@ var htmlTemplet=`
          <div>
              ${content}
          </div>
-          <div class="align_left">--${author}</div>
-            
         </div>
+        <div class="align_left">--${author}</div>
  </div>
 </body>
 </html>
