@@ -90,16 +90,67 @@ app.get('/ui/madi.png', function (req, res) {
 app.get('/ui/article.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'article.css'));
 });
+
+var articleone={
+    date:'5/10/2017',
+    title:'first article',
+    content:'hii its first one in series',
+    heading:"first article"
+};
+
+
+
+
+
+
+function createTemplet(data){
+var title=data.title;
+var date=data.date;
+var content=data.content;
+var heading=data.heading;
+var htmlTemplet=`
+
+<!doctype html>
+
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale-1">
+    <link href="/ui/article.css" rel="stylesheet" />
+    <title>
+        $(title)
+    </title>
+</head>
+<body>
+    <div class="container">
+        <a href="/">Home</a>
+        <hr>
+        <h>
+        $(heading)</h>
+        <div class="center">
+         <div>
+             $(date)
+         </div>
+         <div>
+             $(contents)
+         </div>
+            
+        </div>
+ </div>
+</body>
+</html>
+
+
+
+
+`;
+return htmlTemplet;
+}
+
 app.get('/articleone',function(req,res){
-    res.sendFile(path.join(__dirname, 'ui', 'articleone.html'));
+    res.sendFile(path.join(__dirname, 'ui', createTemplet(articleone)));
 });
 
 
 
-
-app.get('/articlethird',function(req,res){
-    res.send("third article is served");
-});
 // Do not change port, otherwise your app won't run on IMAD servers
 // Use 8080 only for local development if you already have apache running on 80
 
