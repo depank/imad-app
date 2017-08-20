@@ -150,14 +150,15 @@ var htmlTemplet=`
         <h >
         ${heading}</h></div>
          <div>
-                <div>${date}</div>
-                <div class="align_left">${author}</div>
+                ${date}
          </div>
+        
         <div class="center">
         
          <div>
              ${content}
          </div>
+          <div class="align_left">--${author}</div>
             
         </div>
  </div>
