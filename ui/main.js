@@ -22,5 +22,5 @@ var h=document.getElementById("article_id").textContent;
 
 req.open("GET", "/submit?cmnt="+coment+"&id="+h, true);
 
-req.send();
+req.send(null);
 };
