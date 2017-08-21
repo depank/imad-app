@@ -106,35 +106,6 @@ app.get('/ui/article.css', function (req, res) {
 
 var pool=new pool(config);
 
-
-
-
-var articles={
-    
-    articleone:{date:'5/10/2017',
-    title:'first article',
-     heading:"first article",
-     author:'suraj kumar rajput',
-    content:'hii its first one in series'
-   },
-    articletwo:{
-        date:'10/10/2017',
-    title:'second article',
-    heading:"second article",
-    author:'deepak kumar singh',
-    content:'hii its second one in series'
-    
-    },
-    articlethree:{
-        date:'15/10/2017',
-    title:'third article',
-     heading:"third article",
-     author:'Deepu',
-    content:'hii its third one in series'
-   
-    }
-    
-};
 function createTemplet(data){
     try{
 var title=data.title;
@@ -217,9 +188,13 @@ pool.query('SELECT * FROM test',function(err,result){
 });
 
 var allComment=[];
-app.get('/submit/:cmnt',function(req,res){
+app.get('/submit/:cmnt/:title:',function(req,res){
     var comment=req.params.cmnt;
     allComment.push(comment);
+    pool.query("INSERT * INTO $1 VALUES($2)",[req.params.title,req.params.cmnt],function(err,result){
+       if(err){
+           res.status(500).send(err.toString());}
+       });
     res.send(JSON.stringify(allComment));
     
 });
