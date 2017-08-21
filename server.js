@@ -212,8 +212,8 @@ pool.query('SELECT * FROM test',function(err,result){
 });
 
 var allComment=[];
-app.get('/submit-cmnt',function(req,res){
-    var comment=req.query.cmnt;
+app.get('/submit/:cmnt',function(req,res){
+    var comment=req.params.cmnt;
     allComment.push(comment);
     res.send(JSON.stringify(allComment));
     
