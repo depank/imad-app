@@ -100,7 +100,7 @@ app.get('/ui/article.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'article.css'));
 });
 
-var pool=new Pool(config);
+var pool=new pool(config);
 
 
 
