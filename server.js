@@ -193,15 +193,9 @@ app.get('/submit',function(req,res){
     var allComment=[];
     var comment=req.param('cmnt');
     var id=req.param('id');
-    //allComment.push(comment);
-     pool.query("INSERT  INTO comments VALUES($1,$2)",[id,comment],function(err,result){
-       if(err){
-           res.status(500).send(err.toString());
-       }
-     }
-     );
-     
-       pool.query("SELECT comment FROM comments  WHERE id=$1",[id],function(err,result){
+    allComment.push(comment);
+    
+    pool.query("SELECT comment FROM comments  WHERE id=$1",[id],function(err,result){
        if(err){
            res.status(500).send(err.toString());
        }
@@ -216,6 +210,20 @@ app.get('/submit',function(req,res){
             res.send(JSON.stringify(allComment));
        }
    });
+    
+    
+    
+    
+    
+    
+     pool.query("INSERT  INTO comments VALUES($1,$2)",[id,comment],function(err,result){
+       if(err){
+           res.status(500).send(err.toString());
+       }
+     }
+     );
+     
+       
      
    // res.send(JSON.stringify(allComment));
     
