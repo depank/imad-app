@@ -193,7 +193,7 @@ app.get('/submit',function(req,res){
     var comment=req.param('cmnt');
     var id=req.param('id');
     allComment.push(comment+id);
-    var table='article_'+id;
+    var table="article_"+id;
      pool.query("INSERT  INTO $2 VALUES($1)",[comment,table],function(err,result){
        if(err){
            res.status(500).send(err.toString());
