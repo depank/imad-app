@@ -182,7 +182,6 @@ var htmlTemplet=`
               </div>
               <div>
               <p id="list_cmnt"></p></div>
- </div>
      <script src="/ui/main.js" rel="script/javascript"></script>
      <script>
      console.log("hjbvhj");
@@ -209,6 +208,7 @@ req.open("GET", "/submit/"+coment, true);
 
 req.send();
 };</script>
+</div>
 </body>
 </html>
 
