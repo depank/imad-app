@@ -152,7 +152,7 @@ var htmlTemplet=`
 <head>
     <meta name="viewport" content="width=device-width,initial-scale-1">
     <link href="/ui/article.css" rel="stylesheet" />
-    <script href="/ui/main.js" rel="javascript"></script>
+    <script href="/ui/main.js" rel="script/javascript"></script>
     <title>
         ${title}
     </title>
