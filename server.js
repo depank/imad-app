@@ -207,9 +207,9 @@ app.get('/submit',function(req,res){
            res.status(404).send("Article not found");
        }
        else{
-           var articleData=result.rows[0];
+           
            for(var i=0;i<result.rows.length;i++)
-           {allComment.push(result.rows[i].column[1]);}
+           {allComment.push(result.rows[i]);}
             res.send(JSON.stringify(allComment));
        }
    });
