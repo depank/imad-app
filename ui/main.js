@@ -12,6 +12,6 @@ req.onreadystatechange = function() {
        document.getElementById("list_cmnt").innerHTML +="<li>"+cmnt_[i]+"</li>";}
     }
 };
-req.open("GET", "/submit-'"+coment+"'", true);
+req.open("GET", "/submit/'"+coment+"'", true);
 req.send();
 };
