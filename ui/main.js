@@ -12,6 +12,7 @@ req.onreadystatechange = function() {
        for(var i=0;i<cmnt_.length;i++){
        list +="<li>"+cmnt_[i]+"</li>";}
     }
+    console.log(list);
     var cmnt_list=document.getElementById("ist_cmnt");
     cmnt_list.innerHtml=list;
 };
