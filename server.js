@@ -1,7 +1,7 @@
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
-var pool=require('pg').pool;
+var pool=require('pg').Pool;
 
 var config={
     user:'rasdeep203',
@@ -100,7 +100,7 @@ app.get('/ui/article.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'article.css'));
 });
 
-var pool=new pool(config);
+var pool=new Pool(config);
 
 
 
