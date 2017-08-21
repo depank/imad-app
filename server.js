@@ -181,7 +181,7 @@ var htmlTemplet=`
               <input type="button" value="submit" id="submit_btn">
               </div>
               <div>
-              <p id="list_cmnt">ainooa</p></div>
+              <ul id="list_cmnt"><li>ainooa</li></ul></div>
      <script src="/ui/main.js" rel="script/javascript"></script>
      <script>
      console.log("hjbvhj");
@@ -202,7 +202,7 @@ req.onreadystatechange = function() {
     }
     console.log(list);
     var cmnt_list=document.getElementById("list_cmnt");
-    cmnt_list.innerHtml="<ul>"+list+"</ul>";
+    cmnt_list.innerHtml=+list;
 };
 req.open("GET", "/submit/"+coment, true);
 
