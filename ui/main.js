@@ -1,4 +1,4 @@
-    console.log("hjbvhj");
+
 var submit_btn=document.getElementById('submit_btn');
 submit_btn.onclick=function (){
 console.log("hjbvhjjk1");
@@ -14,9 +14,8 @@ req.onreadystatechange = function() {
        for(var i=0;i<cmnt_.length;i++){
        list +="<li>"+cmnt_[i]+"</li>";}
     }
-    console.log(list);
+    
     var cmnt_list=document.getElementById("list_cmnt");
-    cmnt_list.innerHTML=list;
 };
 req.open("GET", "/submit/"+coment, true);
 
