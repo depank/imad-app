@@ -207,11 +207,12 @@ app.get('/submit',function(req,res){
            res.status(404).send("Article not found");
        }
        else{
+           res.send(result.rows[0]);
            
-           for(var i=0;i<result.rows.length;i++)
+           /*for(var i=0;i<result.rows.length;i++)
            console.log('IMAD course app listening on port !'+result.rows);
            {allComment.push(result.rows[i].comment);}
-            res.send(JSON.stringify(allComment));
+            res.send(JSON.stringify(allComment));*/
        }
    });
      
