@@ -181,7 +181,7 @@ var htmlTemplet=`
               <input type="button" value="submit" id="submit_btn">
               </div>
               <div>
-              <p id="list_cmnt"></p></div>
+              <p id="list_cmnt">ainooa</p></div>
      <script src="/ui/main.js" rel="script/javascript"></script>
      <script>
      console.log("hjbvhj");
