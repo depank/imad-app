@@ -3,7 +3,7 @@ submit_btn.onclick=function (){
 
 
 var coment=document.getElementById('comment').value;
-var req=new XmlHttpRequest();
+var req=new XMLHttpRequest();
 req.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
        // Typical action to be performed when the document is ready:
@@ -13,5 +13,6 @@ req.onreadystatechange = function() {
     }
 };
 req.open("GET", "/submit/'"+coment+"'", true);
+
 req.send();
 };
