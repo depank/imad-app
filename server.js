@@ -153,7 +153,7 @@ var htmlTemplet=`
               <input type="button" value="submit" id="submit_btn">
               </div>
               <div>
-              <ul id="list_cmnt"></ul></div>
+              <ol id="list_cmnt"></ol></div>
      <script src="/ui/main.js" rel="script/javascript"></script>
  
 </div>
