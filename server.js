@@ -188,13 +188,10 @@ pool.query('SELECT * FROM test',function(err,result){
 });
 
 var allComment=[];
-app.get('/submit/:cmnt/:title:',function(req,res){
+app.get('/submit/:cmnt:title:',function(req,res){
     var comment=req.params.cmnt;
     allComment.push(comment);
-    pool.query("INSERT * INTO $1 VALUES($2)",[req.params.title,req.params.cmnt],function(err,result){
-       if(err){
-           res.status(500).send(err.toString());}
-       });
+   
     res.send(JSON.stringify(allComment));
     
 });
