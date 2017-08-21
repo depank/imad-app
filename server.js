@@ -209,6 +209,7 @@ app.get('/submit',function(req,res){
        else{
            
            for(var i=0;i<result.rows.length;i++)
+           console.log('IMAD course app listening on port !'+result.rows);
            {allComment.push(result.rows[i].comment);}
             res.send(JSON.stringify(allComment));
        }
