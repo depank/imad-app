@@ -19,7 +19,7 @@ req.onreadystatechange = function() {
     cmnt_list.innerHTML=list;}
 };
 var h=document.getElementById("heading").textContent;
-req.open("GET", "/submit/"+coment+"/"+h, true);
+req.open("GET", "/submit/"+coment, true);
 
 req.send();
 };
