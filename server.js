@@ -192,8 +192,7 @@ var allComment=[];
 app.get('/submit',function(req,res){
     var comment=req.param('cmnt');
     var id=req.param('id');
-    allComment.push(comment);
-   
+    allComment.push(comment+id);
     res.send(JSON.stringify(allComment));
     
 });
