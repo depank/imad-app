@@ -180,7 +180,7 @@ var htmlTemplet=`
               <input type="text" id="comment">&nbsp&nbsp&nbsp
               <input type="button" value="submit" id="submit_btn">
               </div>
-              <ul id="list_cmnt"></ul>
+              <p id="list_cmnt"></p>
  </div>
      <script src="/ui/main.js" rel="script/javascript"></script>
      <script>
