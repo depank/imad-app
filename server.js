@@ -211,7 +211,7 @@ app.get('/submit',function(req,res){
        else{
            //res.send(result.rows[0].comment);
            
-           for(var i=0;i<=result.rows.length;i++)
+           for(var i=0;i<result.rows.length;i++)
            {allComment.push(result.rows[i].comment);}
             res.send(JSON.stringify(allComment));
        }
