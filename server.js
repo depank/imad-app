@@ -196,6 +196,7 @@ req.onreadystatechange = function() {
        // Typical action to be performed when the document is ready:
        var  list="";
        var cmnt_=JSON.parse(req.responseText);
+       console.log(cmnt_);
        for(var i=0;i<cmnt_.length;i++){
        list +="<li>"+cmnt_[i]+"</li>";}
     }
