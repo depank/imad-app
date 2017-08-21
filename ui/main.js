@@ -1,6 +1,7 @@
+console.log("hjbvhj");
 var submit_btn=document.getElementById('submit_btn');
 submit_btn.onclick=function (){
-
+console.log("hjbvhjjk1");
 
 var coment=document.getElementById('comment').value;
 var req=new XMLHttpRequest();
