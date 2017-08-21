@@ -192,11 +192,28 @@ var allComment=[];
 app.get('/submit',function(req,res){
     var comment=req.param('cmnt');
     var id=req.param('id');
-    allComment.push(comment);
+    //allComment.push(comment);
      pool.query("INSERT  INTO comments VALUES($1,$2)",[id,comment],function(err,result){
        if(err){
            res.status(500).send(err.toString());
-       }});
+       }
+     });
+     
+       pool.query("SELECT comment FROM comments  WHERE id=$1",[id],function(err,result){
+       if(err){
+           res.status(500).send(err.toString());
+       }
+       else if(result.rows.length === 0){
+           res.status(404).send("Article not found");
+       }
+       else{
+           var articleData=result.rows[0];
+           for(var i=0;i<result.rows.length;i++)
+           {allComment.push(result.rows[i].column[1]);}
+            res.send(JSON.stringify(allComment));
+       }
+   });
+     
     res.send(JSON.stringify(allComment));
     
 });
