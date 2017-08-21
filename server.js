@@ -193,10 +193,10 @@ app.get('/submit',function(req,res){
     var comment=req.param('cmnt');
     var id=req.param('id');
     allComment.push(comment+id);
-    /* pool.query("INSERT  INTO article_1 VALUES($1)",[comment],function(err,result){
+     pool.query("INSERT  INTO article_1 VALUES($1)",[comment],function(err,result){
        if(err){
            res.status(500).send(err.toString());
-       }});*/
+       }});
     res.send(JSON.stringify(allComment));
     
 });
