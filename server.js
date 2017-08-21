@@ -209,7 +209,7 @@ app.get('/submit',function(req,res){
        else{
            
            for(var i=0;i<result.rows.length;i++)
-           {allComment.push(result.rows[i]);}
+           {allComment.push(result.rows[i].comment);}
             res.send(JSON.stringify(allComment));
        }
    });
