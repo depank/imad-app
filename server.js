@@ -113,6 +113,7 @@ var date=data.date;
 var content=data.content;
 var heading=data.heading;
 var author=data.author;
+var id=data.id;
 
 
 
@@ -138,7 +139,7 @@ var htmlTemplet=`
          <div>
                 ${date.toDateString()}
          </div>
-        
+        <div id="article_id hidden>${id}</div>
         <div class="center">
         
          <div>
