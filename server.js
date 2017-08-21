@@ -188,7 +188,7 @@ pool.query('SELECT * FROM test',function(err,result){
 });
 
 var allComment=[];
-app.get('/submit/:cmnt:title:',function(req,res){
+app.get('/submit/:cmnt',function(req,res){
     var comment=req.params.cmnt;
     allComment.push(comment);
    
