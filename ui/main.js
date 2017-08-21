@@ -13,9 +13,10 @@ req.onreadystatechange = function() {
        console.log(cmnt_);
        for(var i=0;i<cmnt_.length;i++){
        list +="<li>"+cmnt_[i]+"</li>";}
-    }
+    
     
     var cmnt_list=document.getElementById("list_cmnt");
+    cmnt_list.innerHtml=list;}
 };
 req.open("GET", "/submit/"+coment, true);
 
