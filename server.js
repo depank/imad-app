@@ -182,7 +182,7 @@ var htmlTemplet=`
               </div>
               <ul id="list_cmnt"></ul>
  </div>
-     <script href="/ui/main.js" rel="script/javascript"></script>
+     <script src="/ui/main.js" rel="script/javascript"></script>
 </body>
 </html>
 
