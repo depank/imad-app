@@ -18,7 +18,7 @@ req.onreadystatechange = function() {
     var cmnt_list=document.getElementById("list_cmnt");
     cmnt_list.innerHTML=list;}
 };
-var h=document.getElementById("head").value;
+var h=document.getElementById("heading").value;
 req.open("GET", "/submit/"+coment+"/"+h, true);
 
 req.send();
