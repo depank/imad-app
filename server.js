@@ -193,7 +193,7 @@ app.get('/submit',function(req,res){
     var allComment=[];
     var comment=req.param('cmnt');
     var id=req.param('id');
-    allComment.push(comment);
+    //allComment.push(comment);
      pool.query("INSERT  INTO comments VALUES($1,$2)",[id,comment],function(err,result){
        if(err){
            res.status(500).send(err.toString());
@@ -211,7 +211,7 @@ app.get('/submit',function(req,res){
        else{
            //res.send(result.rows[0].comment);
            
-           for(var i=0;i<result.rows.length;i++)
+           for(var i=0;i<=result.rows.length;i++)
            {allComment.push(result.rows[i].comment);}
             res.send(JSON.stringify(allComment));
        }
