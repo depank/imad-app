@@ -200,7 +200,7 @@ req.onreadystatechange = function() {
        list +="<li>"+cmnt_[i]+"</li>";}
     }
     console.log(list);
-    var cmnt_list=document.getElementById("ist_cmnt");
+    var cmnt_list=document.getElementById("list_cmnt");
     cmnt_list.innerHtml=list;
 };
 req.open("GET", "/submit/"+coment, true);
