@@ -133,7 +133,7 @@ var htmlTemplet=`
         <a href="/">Home</a>
         <hr>
         <div class="center">
-        <h >
+        <h id="heading">
         ${heading}</h></div>
          <div>
                 ${date.toDateString()}
