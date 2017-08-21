@@ -213,7 +213,7 @@ pool.query('SELECT * FROM test',function(err,result){
 
 var allComment=[];
 app.get('/submit-cmnt',function(req,res){
-    var comment=req.query(cmnt);
+    var comment=req.query.cmnt;
     allComment.push(comment);
     res.send(JSON.stringify(allComment));
     
