@@ -190,11 +190,9 @@ catch(err){
 
 }
 app.get('/:articleName',function(req,res){
-    var articleName=req.params.articleName;
-    res.send(createTemplet(articles[articleName]));
-});
+ 
 
-app.get('/test.db', function (req, res) {
+app.get('/test_db', function (req, res) {
 pool.query('SELECT * FROM test',function(err,result){
     
     if(err){
@@ -208,6 +206,10 @@ pool.query('SELECT * FROM test',function(err,result){
 });
 });
 
+
+   var articleName=req.params.articleName;
+    res.send(createTemplet(articles[articleName]));
+});
 
 
 
