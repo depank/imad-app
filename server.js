@@ -139,7 +139,7 @@ var htmlTemplet=`
          <div>
                 ${date.toDateString()}
          </div>
-        <div id="article_id hidden">${id}</div>
+        <div id="article_id" hidden>${id}</div>
         <div class="center">
         
          <div>
