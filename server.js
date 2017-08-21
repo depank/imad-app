@@ -19,6 +19,10 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
+app.get('/ui/main.js', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'main.js'));
+});
+
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
@@ -148,6 +152,7 @@ var htmlTemplet=`
 <head>
     <meta name="viewport" content="width=device-width,initial-scale-1">
     <link href="/ui/article.css" rel="stylesheet" />
+    <link href="/ui/main.js" rel="javascript" />
     <title>
         ${title}
     </title>
