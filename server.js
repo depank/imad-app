@@ -198,11 +198,11 @@ app.get('/submit/:cmnt',function(req,res){
 
 app.get('/api/users',function(req,res){
     var id=req.param('id');
-    var tag=req.params.tag;
-    var token=req.params.token;
+    var tag=req.param('tag');
+    var token=req.param('token');
 
    
-    res.send("hii"+id);
+    res.send("hii"+id+tag+token);
     
 });
 
