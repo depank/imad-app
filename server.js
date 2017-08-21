@@ -160,7 +160,7 @@ var htmlTemplet=`
         <h >
         ${heading}</h></div>
          <div>
-                ${date}
+                ${date.toDateString()}
          </div>
         
         <div class="center">
