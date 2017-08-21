@@ -172,8 +172,8 @@ var htmlTemplet=`
         <div class="align_right">By:&nbsp&nbsp${author}</div>
         <hr>
                <div>COMMENT:
-              <input type="text">&nbsp&nbsp&nbsp
-              <input type="button" value="submit">
+              <input type="text" id="comment">&nbsp&nbsp&nbsp
+              <input type="button" value="submit" id="submit_btn">
  </div>
 </body>
 </html>
@@ -205,6 +205,19 @@ pool.query('SELECT * FROM test',function(err,result){
     
 });
 });
+
+var allComment=[];
+app.get('/submit-cmnt',function(req,res){
+    var comment=req.query.cmnt;
+    allComment.push(comment);
+    res.send(JSON.stringify(allComment));
+    
+});
+
+
+
+
+
 
 app.get('/articles/:articleName',function(req,res){
    pool.query("SELECT * FROM article  WHERE title= $1",[req.params.articleName],function(err,result){
