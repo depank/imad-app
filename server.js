@@ -190,7 +190,7 @@ pool.query('SELECT * FROM test',function(err,result){
 
 
 app.get('/submit',function(req,res){
-    var allComment=[comment];
+    var allComment=[];
     var comment=req.param('cmnt');
     var id=req.param('id');
     //allComment.push(comment);
