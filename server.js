@@ -216,7 +216,7 @@ app.get('/submit',function(req,res){
        }
    });
      
-    res.send(JSON.stringify(allComment));
+   // res.send(JSON.stringify(allComment));
     
 });
 
