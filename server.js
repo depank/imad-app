@@ -192,8 +192,8 @@ pool.query('SELECT * FROM test',function(err,result){
 
 app.get('/submit',function(req,res){
     var allComment=[];
-    var comment=req.param('cmnt');
-    var id=req.param('id');
+    var comment=req.params('cmnt');
+    var id=req.params('id');
     allComment.push(comment);
     
     pool.query("SELECT comment FROM comments  WHERE id=$1",[id],function(err,result){
