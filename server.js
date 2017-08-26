@@ -30,7 +30,7 @@ app.get('/hash/:input', function (req, res) {
     res.send(hash(input,'this-is-random-string'));
 });
 
-app.POST('/user', function (req, res) {
+app.post('/user', function (req, res) {
     var username=req.body.username;
     var password=req.body.password;
     
