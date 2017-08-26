@@ -2,6 +2,7 @@ var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
 var pool=require('pg').Pool;
+var crypto=require('crypto');
 
 var config={
     user:'rasdeep203',
@@ -13,6 +14,24 @@ var config={
 
 var app = express();
 app.use(morgan('combined'));
+
+function hash(input,salt){
+   var hashed= crypto.pbkdf2Sync(input, salt, 10000, 512, 'sha512');
+   return hashed.toString();
+}
+
+
+
+
+app.get('/hash/:input', function (req, res) {
+    var input=req.params.input;
+    res.send(hash(input,'this-is-random-string'));
+});
+
+
+
+
+
 
 app.get('/', function (req, res) {
  
@@ -229,15 +248,7 @@ app.get('/submit',function(req,res){
     
 });
 
-app.get('/api/users',function(req,res){
-    var id=req.param('id');
-    var tag=req.param('tag');
-    var token=req.param('token');
 
-   
-    res.send("hii"+id+tag+token);
-    
-});
 
 
 
