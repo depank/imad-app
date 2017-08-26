@@ -3,6 +3,7 @@ var morgan = require('morgan');
 var path = require('path');
 var pool=require('pg').Pool;
 var crypto=require('crypto');
+var bodyParser=require('body-parser');
 
 var config={
     user:'rasdeep203',
@@ -14,6 +15,7 @@ var config={
 
 var app = express();
 app.use(morgan('combined'));
+app.use(bodyParser.JSON());
 
 function hash(input,salt){
    var hashed= crypto.pbkdf2Sync(input, salt, 10000, 512, 'sha512');
@@ -23,11 +25,33 @@ function hash(input,salt){
 
 
 
-
 app.get('/hash/:input', function (req, res) {
     var input=req.params.input;
     res.send(hash(input,'this-is-random-string'));
 });
+
+app.POST('/user', function (req, res) {
+    var username=req.body.username;
+    var password=req.body.password;
+    
+    var salt=crypto.randomBytes(128).toString('hex');
+    var hashed=hash(password,salt);
+    
+    pool.query("INSERT  INTO credential VALUES($1,$2)",[username,hashed],function(err,result){
+       if(err){
+           res.status(500).send(err.toString());
+       }
+      
+       else{
+          res.send("user is successfully created"+username);
+       }
+    
+
+});
+
+
+
+
 
 
 
