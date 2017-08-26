@@ -3,7 +3,7 @@ var morgan = require('morgan');
 var path = require('path');
 var pool=require('pg').Pool;
 var crypto=require('crypto');
-//var bodyParser=require('body-parser');
+var bodyParser=require('body-parser');
 
 var config={
     user:'rasdeep203',
@@ -15,7 +15,7 @@ var config={
 
 var app = express();
 app.use(morgan('combined'));
-//app.use(bodyParser.JSON());
+app.use(bodyParser.JSON());
 
 function hash(input,salt){
    var hashed= crypto.pbkdf2Sync(input, salt, 10000, 512, 'sha512');
