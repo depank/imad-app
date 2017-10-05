@@ -100,7 +100,9 @@ app.get('/isro/speedpost',function(req,res){
 app.get('/isro/contact.html',function(req,res){
     res.sendFile(path.join(__dirname, 'ui','isro', 'contact.html'));
 });
-
+app.get('/isro/notice.html',function(req,res){
+    res.sendFile(path.join(__dirname, 'ui','isro', 'notice.html'));
+});
 app.get('/new_isro/',function(req,res){
     res.sendFile(path.join(__dirname, 'ui','isro', 'new_home.html'));
 });
