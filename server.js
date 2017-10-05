@@ -103,7 +103,7 @@ app.get('/isro/contact.html',function(req,res){
 app.get('/isro/notice.html',function(req,res){
     res.sendFile(path.join(__dirname, 'ui','isro', 'notice.html'));
 });
-app.get('/calc.html',function(req,res){
+app.get('/isro/calc.html',function(req,res){
     res.sendFile(path.join(__dirname, 'ui', 'calc.html'));
 });
 app.get('/new_isro/',function(req,res){
