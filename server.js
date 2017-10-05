@@ -94,7 +94,7 @@ app.get('/ui/isro/script/home.js', function (req, res) {
 
 
 
-app.get('/isro/',function(req,res){
+app.get('/isro/speedpost',function(req,res){
     res.sendFile(path.join(__dirname, 'ui','isro', 'speedpost.html'));
 });
 
