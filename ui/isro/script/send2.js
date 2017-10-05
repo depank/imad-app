@@ -38,7 +38,7 @@ infowindow.setContent(o);
         geocoder.geocode({'address': address}, function(results, status) {
           if (status === 'OK') {
              document.getElementById('clicked_addr').value=results[0].formatted_address;
-            resultsMap.setCenter(results[0].geometry.location);
+             console.log(results[0].formatted_address); resultsMap.setCenter(results[0].geometry.location);
              var d=document.getElementById('address'); if(isNaN(parseFloat(d.value)))
             var marker = new google.maps.Marker({
               map: resultsMap,
@@ -106,6 +106,8 @@ proc_y.setAttribute('hidden',"");
 p.setAttribute('hidden',"");
 return;}
 var p=document.getElementById('proceed-msg');
+document.getElementById('extra').removeAttribute('hidden');
+document.getElementById('extra1').removeAttribute('hidden');
 p.textContent="r u sure to procced if sure then click yes otherwise no.";
 var proc_n=document.getElementById("proceed_n");
 var proc_y=document.getElementById("proceed_y");
@@ -271,6 +273,8 @@ var verify=document.getElementById("verify");
     var p2=document.getElementById("dist");
     p2.textContent="";
      document.getElementById("QRR").setAttribute('hidden',"");
+     document.getElementById('extra').setAttribute('hidden',"");
+document.getElementById('extra1').setAttribute('hidden',"");
  }
  /* 
 var  proc_n=document.getElementById("proceed_n");
