@@ -113,6 +113,9 @@ app.get('/isro/script/send2.js', function (req, res) {
 app.get('/isro/script/qrcode.min.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'isro','script','qrcode.min.js'));
 });
+app.get('/isro/script/qr.js', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'isro','script','qr.js'));
+});
 app.get('/isro/css/send.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'isro','css','send.css'));
 }) ;
