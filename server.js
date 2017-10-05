@@ -111,6 +111,9 @@ app.get('/isro/script/send2.js', function (req, res) {
 app.get('/isro/css/send.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'isro','css','send.css'));
 }) ;
+app.get('/isro/css/common.css', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'isro','css','common.css'));
+}) ;
 
 app.get('/ui/isro/contact.html', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'isro','contact.html'));
