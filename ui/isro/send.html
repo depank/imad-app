@@ -2,18 +2,18 @@
 <html>
 <head><meta charset="utf-8">
 <title>india post</title>
-<link rel="shortcut icon"  href="ui/isro/img/logo.ico">
+<link rel="shortcut icon"  href="project/img/logo.ico">
     
-<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="common.css">
 <link rel="stylesheet" href="css/send.css">
 </head>
 <body oncopy="return false" oncut="return false" onpaste="return false">
 <header>
 
 <ul>
-<a href="#"><li id="logo1"><img src="/ui/isro/img/logo1.png"></li></a>
-<a href="speedpost"><li>home</li></a>
-<a href="send"><li>send a package</li></a>
+<a href="#"><li id="logo1"><img src="project/img/logo1.png"></li></a>
+<a href="speedpost.html"><li>home</li></a>
+<a href="send.html"><li>send a package</li></a>
 <a href="calc.html"><li>calculate postage</li></a>
 <a href="notice.html"><li>notices</li></a>
 <a href="contact.html"><li>contact us</li></a>
@@ -31,7 +31,6 @@
    </i>
     </div>
 <form id="from1">
-    
 <fieldset><legend>sender's details:</legend>
 <label ><div id="fr">sender's name:</div>
 </label>
@@ -39,7 +38,7 @@
 <label ><div id="fr">mobile:
 </div></label>
 <input class="f1" placeholder="mobile" type="text"  id="mob1"></input><br>
-<div id ="extra" hidden="">
+    <div id="extra" hidden="">
 <label ><div id="fr">lattitude:</div>
 </label>
 <input class="f1" placeholder="lattitude" type="text" id="lat1"></input><br>
@@ -62,8 +61,9 @@
 <label ><div id="fr">mobile:
 </div></label>
 <input class="f1" placeholder="mobile" type="text" id="mob2" value=""></input><br>
+<!----  important extra hide --> 
 <div id ="extra1" hidden="">
-<label ><div id="fr">lattitude:</div>
+<label ><div id="fr" >lattitude:</div>
 </label>
 <input class="f1" placeholder="lattitude"  id="lat2" type="text" value=""></input><br>
 <label ><div id="fr">longitude:</div>
@@ -74,8 +74,8 @@
 <input class="f1" placeholder="zip" type="text" id="zip2" value=""></input><br>
 <label ><div id="fr">address:</div>
 </label>
-<input class="f1" placeholder="full addr" type="text" id="addr2" value=""></input>
-</div>
+<input class="f1" placeholder="full addr" type="text" id="addr2" value=""></input></div>
+
 </fieldset>
 </form>
 <br>
@@ -85,11 +85,14 @@
       <input id="address" type="textbox" value="Sydney, NSW">
       <input id="submit"  type="button" value="Geocode">
     </div>
-    <div id="map"></div>
-    
-    <br><br>
+    <div id="map"></div><br><br>
 <div text-align="center" > ADDRESS YOU HAVE CLICKED ON:-<br>
     <textarea rows="4" cols="50" id="clicked_addr"  disabled></textarea></div>
+
+
+
+
+<br><br>
 <div id="subres">submit maped result</div>
 <div >
 <input id="fsubmit" type="button" value="submit for from">
@@ -107,16 +110,19 @@
 <br>
 <input type="button" value="reset" id="set_it" hidden></input>
 <div id="QRR" hidden>
-    <input type="button" value="makeQR" id="set_itQR" ></input>
+    <input type="button" value="makeQR" id="set_itQR" >
 
+ 
 
+    <fieldset><legend> sender's code</legend>
+    <div id="qrcode" title=""></div></fieldset>
 
+<!--<div id="qrcode" ></div> -->
+     
+    <fieldset><legend> sender's code</legend>
+<div id="qrcode1" title="" ></div></fieldset>
 
-    <div id="qrcode" title=""></div><br><br><br><br><br>
-
-<div id="qrcode" ></div></div>
-
-
+</div>
 
 
 <footer>
