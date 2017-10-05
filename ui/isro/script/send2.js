@@ -37,7 +37,7 @@ infowindow.setContent(o);
 
         geocoder.geocode({'address': address}, function(results, status) {
           if (status === 'OK') {
-             
+             document.getElementById('clicked_addr').value=results[0].formatted_address;
             resultsMap.setCenter(results[0].geometry.location);
              var d=document.getElementById('address'); if(isNaN(parseFloat(d.value)))
             var marker = new google.maps.Marker({
