@@ -138,6 +138,7 @@ function getDistanceFromLatLonInKm() {
     if(confirm("r u sure to proceed"))
 nochange();
     else return;
+    
     var reset_=document.getElementById("set_it");
     reset_.removeAttribute('hidden');
     document.getElementById("QRR").removeAttribute('hidden');
@@ -228,6 +229,8 @@ var a=document.querySelectorAll('input');
 for(var i=0;i<12;i++){
 a[i].setAttribute('disabled',"");
 }
+    document.getElementById("set_itQR").removeAttribute('hidden',"");
+    
     var proc_n=document.getElementById("proceed_n");
 var proc_y=document.getElementById("proceed_y");
 var p=document.getElementById('proceed-msg');
@@ -253,8 +256,13 @@ QR_.addEventListener('click',makeCode);
 
 
 
+
  function doit1(){
      reset();
+     document.getElementById("qrcode").textContent="";
+     
+     document.getElementById("qrcode1").textContent="";
+     
     var a=document.querySelectorAll('input');
 for(var i=0;i<12;i++){
 a[i].removeAttribute('disabled');
@@ -297,27 +305,35 @@ p.setAttribute('hidden',"");
 
 
 
-var qrcode = new QRCode("qrcode");
-
+var qrcode1 = new QRCode("qrcode1");
+    var qrcode = new QRCode("qrcode");
 
 function makeCode(form){
+    document.getElementById("set_itQR").setAttribute("hidden","");
     var elText="";
+    var elText1="";
     
 var a=document.querySelectorAll('input');
     
-for(var i=0;i<12;i++){
+for(var i=0;i<6;i++){
 elText=elText+"\n"+a[i].value;
 }
-   
+   for(var i=6;i<12;i++){
+elText1=elText1+"\n"+a[i].value;
+} 
+   console.log(form);
 if (!elText ) {
         alert("Input a text");
         elText.focus();
    
         return;
     }
+    var qrcode1 = new QRCode("qrcode1");
+    var qrcode = new QRCode("qrcode");
  qrcode.makeCode(elText);
-    
+   qrcode1.makeCode(elText1); 
     document.getElementById('qrcode').removeAttribute('title');
+    document.getElementById('qrcode1').removeAttribute('title');
 }
 
 /*makeCode();
@@ -337,6 +353,7 @@ $("#text").
             
         }
     });
+
 
 
 
