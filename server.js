@@ -57,14 +57,14 @@ app.post('/user', function (req, res) {
 
 
 app.get('/ui/ecomplaint/feedback', function (req, res) {
- 
-  res.sendFile(path.join(__dirname, 'ui', 'ecomplaint','feedback.php'));
+    res.send("deep")
+  //res.sendFile(path.join(__dirname, 'ui', 'ecomplaint','feedback.php'));
 });
 
 
 app.get('/', function (req, res) {
- 
-  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
+ res.sendFile(path.join(__dirname, 'ui', 'ecomplaint','feedback.php'));
+ // res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
 app.get('/ui/main.js', function (req, res) {
