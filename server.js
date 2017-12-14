@@ -58,6 +58,7 @@ app.post('/user', function (req, res) {
 
 app.get('/ui/ecomplaint/feedback', function (req, res) {
     res.send("deep")
+    res.sendFile(path.join(__dirname, 'ui', 'index.html'));
   //res.sendFile(path.join(__dirname, 'ui', 'ecomplaint','feedback.php'));
 });
 
